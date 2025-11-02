@@ -37,7 +37,7 @@ async function loadKamus() {
   resultBox.textContent = '❌ Gagal memuat kamus.';
   retryBtn.style.display = 'inline-flex';
   }
-
+}
 /* --- Fungsi debounce --- */
 function debounce(fn, delay = 300) {
   return (...args) => {
