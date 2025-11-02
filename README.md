@@ -1,7 +1,7 @@
 
 # Kamus Digital Dayak Kanayatn / Ahe
 
-**Website:** [Gunakan Kamus](https://racikborneo.github.io/kd-test/)  
+**Website:** [Gunakan Kamus](https://racikborneo.github.io/kd/)  
 **Dibuat dan dikembangkan oleh:** Nelsen Niko
 
 Kamus ini merupakan proyek digital terbuka yang bertujuan mendokumentasikan dan memudahkan pembelajaran bahasa **Dayak Kanayatn / Ahe**. Dibuat dengan teknologi web agar mudah diakses dan dikembangkan oleh siapa saja.
