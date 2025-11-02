@@ -25,7 +25,7 @@ async function loadKamus() {
   resultBox.textContent = 'Memuat kamus...';
 
   try {
-    const res = await fetch('data-max.json?v=' + Date.now(), { cache: 'no-store' });
+    const res = await fetch('/kd/data-max.json?v=' + Date.now()); { cache: 'no-store' });
     if (!res.ok) throw new Error('HTTP ' + res.status);
 
     const { kamus } = await res.json();
