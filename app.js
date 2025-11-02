@@ -25,19 +25,18 @@ async function loadKamus() {
   resultBox.textContent = 'Memuat kamus...';
 
   try {
-    const res = await fetch('/kd/data-max.json?v=' + Date.now()); { cache: 'no-store' });
-    if (!res.ok) throw new Error('HTTP ' + res.status);
+  const res = await fetch('/kd/data-max.json?v=' + Date.now(), { cache: 'no-store' });
+  if (!res.ok) throw new Error('HTTP ' + res.status);
 
-    const { kamus } = await res.json();
-    kamusMap = new Map(Object.entries(kamus['id-dayak']));
-    setDefaultMessage();
-    console.log('Kamus berhasil dimuat. Jumlah entri:', kamusMap.size);
-  } catch (err) {
-    console.error('Gagal memuat kamus:', err);
-    resultBox.textContent = '❌ Gagal memuat kamus.';
-    retryBtn.style.display = 'inline-flex';
+  const { kamus } = await res.json();
+  kamusMap = new Map(Object.entries(kamus['id-dayak']));
+  setDefaultMessage();
+  console.log('Kamus berhasil dimuat. Jumlah entri:', kamusMap.size);
+} catch (err) {
+  console.error('Gagal memuat kamus:', err);
+  resultBox.textContent = '❌ Gagal memuat kamus.';
+  retryBtn.style.display = 'inline-flex';
   }
-}
 
 /* --- Fungsi debounce --- */
 function debounce(fn, delay = 300) {
